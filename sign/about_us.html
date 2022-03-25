@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+          ul{
+         padding: 0px;
+                overflow: hidden;
+                    margin: 0px;
+                         list-style-type: none;
+                             background-color: black;
+    }
+    li{
+        float: right;
+    }
+    li a{
+        display: block;
+            padding: 10px;
+                color: whitesmoke;
+                text-decoration: none;
+    }
+    a:hover{
+        background-color: gray;
+    }
+    .on{ 
+        font-size:50px;
+        text-align: center; 
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: whitesmoke;
+    } 
+   a:active{
+       background-color:grey;
+   }
+   .mySlides {display:none;
+   margin-left: 40vh;}
+
+    </style>
+</head>
+<body>
+    <div>
+    <header class="booty">
+            <div >
+                <nav>
+                    <ul>
+                         <label style="color:dimgrey; font-size:40px"><i><b>signsmart.ng</b></i></label>
+                        <li><a href="#" class = "active">About-us</a></li>
+                        <li><a href="sign_out.php">Sign-outs</a></li>
+                        <li><a href="sign_in.php">Sign-ins</a></li>
+                        <li><a href="index.php">Home</a></li>
+                    </ul>
+                    </nav>
+                </header>
+                <h1 class="on"><b><i>about-us</i></b></h1>
+            </div>
+</div>
+
+<div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="images/laptop1.jpg" style="width:120vh">
+    <img class="mySlides" src="images/laptop2.jpg" style="width:120vh">
+    <img class="mySlides" src="images/laptop3.jpg" style="width:120vh"> 
+    <img class="mySlides" src="images/laptop4.jpg" style="width:120vh">
+    <img class="mySlides" src="images/laptop5.jpg" style="width:120vh"> 
+    <img class="mySlides" src="images/laptop6.jpg" style="width:120vh">
+    <img class="mySlides" src="images/laptop7.jpg" style="width:120vh">
+  </div>
+  
+  <script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+  
+</body>
+</html>
